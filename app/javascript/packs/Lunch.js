@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Lunch.css';
-import Header from './Header/Header';
-import BusinessList from './BusinessList/BusinessList';
-import GoogleMap from './GoogleMap/GoogleMap';
-import Places from './util/Places';
 import { Loader } from '@googlemaps/js-api-loader';
+import './Lunch.css';
+import Header from './components/Header/Header';
+import BusinessList from './components/BusinessList/BusinessList';
+import GoogleMap from './components/GoogleMap/GoogleMap';
+import Places from './util/Places';
 
 
 const loader = new Loader({
