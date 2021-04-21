@@ -54,6 +54,7 @@
 .Business-reviews {
   display: flex;
   flex-direction: row;
+  align-items: center;
   text-align: left;
 }
 
@@ -66,5 +67,5 @@
 }
 .Business-reviews .user-ratings-total {
   font-size: .8rem;
-  color: #ddd;
+  color: #AAA;
 }

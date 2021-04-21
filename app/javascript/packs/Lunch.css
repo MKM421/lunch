@@ -35,12 +35,9 @@ h1,h2,h3,h4,h5 {
   justify-content: space-between;
 }
 
-.map-container {
-  width: 65%;
-  height: 600px;
-  margin-left: 20px;
-}
-#map {
-  height: 100%;
-  width: 100%;
+@media only screen and (max-width: 780px) {
+  .content-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 }
