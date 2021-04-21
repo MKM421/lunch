@@ -55,9 +55,12 @@
 .Business .favorite-icon {
   fill: #c9c9c9;
   float: right;
-  margin: -12px -12px 0;
+  margin: -9px -8px 0;
+  align-self: flex-start;
 }
-
+.Business .PrivateSwitchBase-root-4 {
+  padding:5px;
+}
 .Business-reviews {
   display: flex;
   flex-direction: row;
