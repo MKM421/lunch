@@ -29,7 +29,9 @@ class Lunch extends React.Component {
         <Header searchPlaces={this.searchPlaces} businesses={this.state.businesses}/>
         <div className="content-container">
           <BusinessList businesses={this.state.businesses} />
-
+          <div className="map-container">
+            <div id="map"></div>
+          </div>
         </div>
 
       </div>

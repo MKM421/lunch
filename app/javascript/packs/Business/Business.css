@@ -5,6 +5,7 @@
   border-radius: 10px;
   border: 1px solid #ddd;
   padding: 15px;
+  background: #fff;
 }
 .Business:hover {
   cursor: pointer;
