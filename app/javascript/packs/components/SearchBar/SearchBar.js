@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
 
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
 
@@ -25,13 +26,18 @@ class SearchBar extends React.Component {
     event.preventDefault();
   }
 
-
+  handleKeyDown(event) {
+    if (event.key === 'Enter') {
+      this.props.searchPlaces(this.state.term);
+      event.preventDefault();
+    }
+  }
 
   render() {
     return (
       <div className="SearchBar">
         <div className="SearchBar-fields">
-          <input id="search-input" type="text" placeholder="Search for a restaurant" onChange={this.handleTermChange} />
+          <input id="search-input" type="text" placeholder="Search for a restaurant" onChange={this.handleTermChange} onKeyDown={this.handleKeyDown}/>
         </div>
         <div className="SearchBar-submit">
           <SearchIcon className="search-icon" onClick={this.handleSearch}/>
