@@ -4,14 +4,15 @@
 
 .filter .filter-button {
   background: #fff;
-  padding: 7px 2px;
+  padding: 5px 2px;
   border: 1px solid #ddd;
   color: #828282;
   font-size: .65em;
   font-weight: 100;
-  border-radius: 10px;
+  border-radius: 6px;
   text-transform: capitalize;
   box-shadow: none;
+  min-width: 50px;
 }
 .filter .filter-button:hover {
   background-color: #438a14;

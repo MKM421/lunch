@@ -43,7 +43,7 @@
 .SearchBar-fields input {
   font-family: 'Proxima Nova', Arial, sans-serif;
   width: 302px;
-  padding: .66rem 1rem;
+  padding: .5rem 1rem;
   margin-right: 2.22rem;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -68,7 +68,7 @@
 .SearchBar-submit .search-icon {
   fill: #438a14;
   width: .8em;
-  height: 1em;
+  height: 1.2em;
 }
 .SearchBar-submit .search-icon:hover {
   cursor: pointer;

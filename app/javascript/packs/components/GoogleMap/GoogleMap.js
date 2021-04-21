@@ -7,6 +7,10 @@ class GoogleMap extends React.Component {
     return (
       <div className="map-container">
         <div id="map"></div>
+        <div id="info-content">
+          <div id="iw-name"></div>
+          <div id="iw-rating"></div>
+        </div>
       </div>
     );
   }

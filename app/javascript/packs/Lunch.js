@@ -81,8 +81,23 @@ class Lunch extends React.Component {
           </div>
         `;
 
+        document.getElementById("iw-rating").innerHTML = place.name;
+
+        if (place.rating) {
+          let ratingHtml = "";
+
+          for (let i = 0; i < 5; i++) {
+            if (place.rating < i + 0.5) {
+              ratingHtml += "&#10025;";
+            } else {
+              ratingHtml += "&#10029;";
+            }
+            document.getElementById("iw-rating").innerHTML = ratingHtml;
+          }
+        }
+
         const infowindow = new google.maps.InfoWindow({
-          content: contentString,
+          content: document.getElementById("info-content"),
         });
         // Show infoWindow for each restaurant
         marker.addListener("click", () => {
