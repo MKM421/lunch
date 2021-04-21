@@ -1,22 +1,32 @@
 .Business {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 29.66rem;
-  margin: 0 .5rem 2.3rem .5rem;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+.Business:hover {
+  cursor: pointer;
+  border: 2px solid #438a14;
 }
 
 .Business .image-container {
-  height: 19.66rem;
-  margin-bottom: 1rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #333;
+  height: 100px;
+  width: 100px;
   border-radius:10px;
 }
 
 .Business .image-container img {
-  width:115%;
+  width:100px;
 }
 
 .Business h2 {
+  color: #7f7f7f;
   margin-bottom: .5rem;
   font-size: 1.2rem;
   font-weight: 600;
@@ -24,7 +34,8 @@
 
 .Business-information {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 15px;
 }
 
 .Business-information p {
@@ -41,67 +52,18 @@
 
 .Business-reviews {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: right;
+  flex-direction: row;
+  text-align: left;
 }
 
-.Business-reviews h3 {
-  color: #00a89a;
-  font-weight: 600;
+.Business-reviews .restaurant-rating {
+  color: #f1d165;
+  font-size: 1.2rem;
 }
-
-.Business-reviews .rating {
-  font-size: .88rem;
-  line-height: 1rem;
+.Business-reviews .restaurant-rating .MuiRating-decimal {
+  margin-right: 3px;
 }
-
-@media only screen and (max-width: 1600px) {
-  .Business {
-    width: 24.66rem;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  .Business {
-    width: 23.66rem;
-  }
-}
-
-@media only screen and (max-width: 1330px) {
-  .Business {
-    width: 22.66rem;
-  }
-}
-
-@media only screen and (max-width: 1280px) {
-  .Business {
-    width: 30.66rem;
-  }
-}
-
-
-@media only screen and (max-width: 1180px) {
-  .Business {
-    width: 25.66rem;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .Business {
-    width: 22.66rem;
-  }
-}
-
-
-@media only screen and (max-width: 880px) {
-  .Business {
-    width: 21.66rem;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  .Business {
-    width: 31.66rem;
-  }
+.Business-reviews .user-ratings-total {
+  font-size: .8rem;
+  color: #ddd;
 }

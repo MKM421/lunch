@@ -1,0 +1,35 @@
+/* Universal Styles */
+
+html {
+  font-size: 18px;
+}
+body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+/* App Styles */
+
+.App {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+  color: #7f7f7f;
+}
+
+.content-container {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  justify-content: space-between;
+}

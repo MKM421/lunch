@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import SearchIcon from '@material-ui/icons/Search';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -51,11 +52,13 @@ class SearchBar extends React.Component {
   renderSortByOptions() {
     return Object.keys(this.sortByOptions).map(sortByOption => {
       let sortByOptionValue = this.sortByOptions[sortByOption];
-      return (<li className={this.getSortByClass(sortByOptionValue)}
-                  key={sortByOptionValue}
-                  onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>
-                {sortByOption}
-             </li>);
+      return (
+        <li className={this.getSortByClass(sortByOptionValue)}
+            key={sortByOptionValue}
+            onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>
+              {sortByOption}
+        </li>
+      );
     });
   }
 
@@ -63,15 +66,15 @@ class SearchBar extends React.Component {
     return (
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
-          <ul>
+          {/*<ul>
             {this.renderSortByOptions()}
-          </ul>
+          </ul>*/}
         </div>
         <div className="SearchBar-fields">
           <input placeholder="Search for a restaurant..." onChange={this.handleTermChange} />
         </div>
         <div className="SearchBar-submit">
-          <a onClick={this.handleSearch}>Let's Eat</a>
+          <SearchIcon className="search-icon" onClick={this.handleSearch}/>
         </div>
       </div>
     );

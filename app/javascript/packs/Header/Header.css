@@ -1,0 +1,37 @@
+.page-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 2px 6px 2px #E8E8E8;
+}
+
+.header-container {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  width: 100%;
+  align-self: auto;
+  font-size: 1.8rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  color: #ccc;
+  margin: 0 0 0 10px;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+}
+
+.search-filter-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-right: 20px;
+}

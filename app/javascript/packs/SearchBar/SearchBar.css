@@ -1,10 +1,8 @@
 .SearchBar {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 25rem;
 }
 
 .SearchBar-sort-options ul {
@@ -39,17 +37,18 @@
 .SearchBar-fields {
   display: flex;
   justify-content: center;
-  margin-bottom: 2.88rem;
+  margin-bottom: 0;
 }
 
 .SearchBar-fields input {
-  width: 21rem;
+  width: 304px;
   padding: .66rem 1rem;
   margin-right: 2.22rem;
-  border: 1px solid #fff;
-  border-radius: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
   font-size: .8rem;
   font-weight: 500;
+  box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 10%)
 }
 
 .SearchBar-fields input:last-child {
@@ -57,18 +56,22 @@
 }
 
 .SearchBar-submit {
+  position: absolute;
+  right: 0;
+  font-size: 2em;
+  width: 1em;
   text-align: center;
 }
 
-.SearchBar-submit a {
-  border-radius: 4px;
-  padding: .72rem 1.7rem;
-  background-color: #00a89a;
-  border-radius: 30px;
-  color: #ffffff;
-  font-weight: 600;
-  transition: background-color .5s;
+.SearchBar-submit .search-icon {
+  fill: #438a14;
+  width: 1em;
+  height: 1em;
 }
+.SearchBar-submit .search-icon:hover {
+  cursor: pointer;
+}
+
 
 .SearchBar-submit a:hover {
   cursor: pointer;

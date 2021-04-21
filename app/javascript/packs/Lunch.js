@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App/App.css';
-
+import './Lunch.css';
+import Header from './Header/Header';
 import BusinessList from './BusinessList/BusinessList';
-import SearchBar from './SearchBar/SearchBar';
-import Places from './Places';
+import Places from './util/Places';
+
 
 class Lunch extends React.Component {
   constructor(props) {
@@ -26,9 +26,12 @@ class Lunch extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>AllTrails at Lunch</h1>
-        <SearchBar searchPlaces={this.searchPlaces} />
-        <BusinessList businesses={this.state.businesses} />
+        <Header searchPlaces={this.searchPlaces} businesses={this.state.businesses}/>
+        <div className="content-container">
+          <BusinessList businesses={this.state.businesses} />
+
+        </div>
+
       </div>
     );
   }
