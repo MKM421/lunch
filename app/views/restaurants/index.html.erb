@@ -1,0 +1,6 @@
+<%= javascript_pack_tag 'Lunch' %>
+
+<%= content_tag :div,
+  id: "restaurants_data",
+  data: @restaurants.to_json do %>
+<% end %>

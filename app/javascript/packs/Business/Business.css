@@ -1,0 +1,107 @@
+.Business {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 29.66rem;
+  margin: 0 .5rem 2.3rem .5rem;
+}
+
+.Business .image-container {
+  height: 19.66rem;
+  margin-bottom: 1rem;
+  border-radius:10px;
+}
+
+.Business .image-container img {
+  width:115%;
+}
+
+.Business h2 {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.Business-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Business-information p {
+  font-size: .88rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+
+.Business-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Business-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.Business-reviews h3 {
+  color: #00a89a;
+  font-weight: 600;
+}
+
+.Business-reviews .rating {
+  font-size: .88rem;
+  line-height: 1rem;
+}
+
+@media only screen and (max-width: 1600px) {
+  .Business {
+    width: 24.66rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .Business {
+    width: 23.66rem;
+  }
+}
+
+@media only screen and (max-width: 1330px) {
+  .Business {
+    width: 22.66rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .Business {
+    width: 30.66rem;
+  }
+}
+
+
+@media only screen and (max-width: 1180px) {
+  .Business {
+    width: 25.66rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .Business {
+    width: 22.66rem;
+  }
+}
+
+
+@media only screen and (max-width: 880px) {
+  .Business {
+    width: 21.66rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .Business {
+    width: 31.66rem;
+  }
+}
