@@ -17,25 +17,16 @@
   flex-direction: row;
   justify-content: center;
   background-color: #333;
-  height: 100px;
-  width: 100px;
-  border-radius:10px;
+  height: 65px;
+  width: 65px;
 }
 
 .Business .image-container img {
-  width:100px;
-}
-
-.Business h2 {
-  color: #7f7f7f;
-  margin-bottom: .5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+  width:65px;
 }
 
 .Business-information {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   padding-left: 15px;
 }
 
@@ -45,10 +36,26 @@
   line-height: 1.2rem;
 }
 
-.Business-address {
+.Business h2 {
+  color: #7f7f7f;
+  margin-top: .1rem;
+  margin-bottom: .3rem;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.Business .title-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
   justify-content: space-between;
+}
+
+.Business .favorite-icon {
+  fill: #c9c9c9;
+  float: right;
+  margin: -12px -12px 0;
 }
 
 .Business-reviews {
@@ -60,12 +67,12 @@
 
 .Business-reviews .restaurant-rating {
   color: #f1d165;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .Business-reviews .restaurant-rating .MuiRating-decimal {
   margin-right: 3px;
 }
 .Business-reviews .user-ratings-total {
-  font-size: .8rem;
-  color: #AAA;
+  font-size: .6rem;
+  color: #bbb;
 }

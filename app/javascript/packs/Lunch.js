@@ -30,6 +30,9 @@ loader.load()
   .then(() => {
     const map = new google.maps.Map(document.getElementById("map"), mapOptions);
   })
+  .catch(e => {
+    console.log('Something went wrong, please check map API call...');
+  });
 
 
 class Lunch extends React.Component {
@@ -43,10 +46,10 @@ class Lunch extends React.Component {
     this.searchPlaces = this.searchPlaces.bind(this);
   }
 
+  searchPlaces(term) {
+    Places.search(term).then(results => {
 
-  searchPlaces(term, location, sortBy) {
-    Places.search(term, location, sortBy).then(results => {
-      this.setState({businesses: results});
+      this.setState({ businesses: results });
 
       const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
@@ -67,7 +70,7 @@ class Lunch extends React.Component {
           map,
           icon: svgMarker,
           title: place.name,
-          position: place.location,
+          position: place.lunchLocation,
           animation: google.maps.Animation.DROP
         });
         // Set infoWindow content

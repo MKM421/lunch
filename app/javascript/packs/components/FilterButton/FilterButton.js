@@ -1,17 +1,20 @@
 import React from 'react';
-import './FilterButton.css';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Button from '@material-ui/core/Button';
+import './FilterButton.css';
 
 const StyledMenu = withStyles({
   paper: {
     border: '1px solid #ddd',
+    minWidth: '280px',
+    padding: '5px 10px',
+    borderRadius: '10px'
   },
 })((props) => (
   <Menu
@@ -30,53 +33,101 @@ const StyledMenu = withStyles({
   />
 ));
 
+const GreenRadio = withStyles({
+  root: {
+    color: '#438a14',
+    '&$checked': {
+      color: '#438a14',
+    },
+  },
+  checked: {},
+})((props) => <Radio color="default" {...props} />);
 
-export default function FilterMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+class FilterButton extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    const spots = this.props.businesses;
+
+    this.state = {
+      anchorEl: null,
+      sort: '',
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({
+      anchorEl: event.currentTarget
+    });
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  handleChange(event) {
+     this.setState({
+       sort: event.target.value
+     });
+   }
 
-  return (
-    <div className="filter">
-      <Button
-        className="filter-button"
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-      >
-        Filter
-      </Button>
-      <StyledMenu
-        id="filter-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <div className="filter-menu-item">
-          <ListItemIcon className="filter-item-icon">
-            <RadioButtonUncheckedIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText className="filter-item-text" primary="Ratings High to Low" />
-        </div>
-        <div className="filter-menu-item">
-          <ListItemIcon className="filter-item-icon">
-            <RadioButtonUncheckedIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText className="filter-item-text" primary="Ratings Low to High" />
-        </div>
-        <div className="apply-button-container">
-          <Button className="apply-button">Apply</Button>
-        </div>
-      </StyledMenu>
-    </div>
-  );
+ handleSubmit(event) {
+   event.preventDefault();
+
+
+
+   if (this.state.sort === "ascending") {
+      this.props.businesses.sort((a,b) => (a.rating - b.rating))
+      console.log(this.props.businesses)
+
+    }
+    if (this.state.sort === "descending") {
+      this.props.businesses.sort((a,b) => (b.rating - a.rating))
+     console.log(this.props.businesses)
+   }
+ }
+
+ handleClose() {
+   this.setState({
+     anchorEl: null
+   });
+ };
+
+
+  render() {
+    return (
+      <div className="filter">
+        <Button
+          className="filter-button"
+          aria-controls="customized-menu"
+          aria-haspopup="true"
+          variant="contained"
+          color="primary"
+          onClick={this.handleClick}
+        >
+          Filter
+        </Button>
+        <StyledMenu
+          id="filter-menu"
+          anchorEl={this.state.anchorEl}
+          keepMounted
+          open={Boolean(this.state.anchorEl)}
+          onClose={this.handleClose}
+        >
+          <RadioGroup aria-label="quiz" name="quiz" value={this.state.sort} onChange={this.handleChange}>
+            <FormControlLabel value="descending" control={<GreenRadio />} className="filter-label-text" label="Ratings High to Low" />
+            <FormControlLabel value="ascending" control={<GreenRadio />} className="filter-label-text" label="Ratings Low to High" />
+          </RadioGroup>
+          <div className="apply-button-container">
+            <Button type="submit" className="apply-button" onClick={this.handleSubmit}>Apply</Button>
+          </div>
+        </StyledMenu>
+      </div>
+    );
+  }
 }
+
+export default FilterButton;
