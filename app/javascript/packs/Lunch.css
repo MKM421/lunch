@@ -5,6 +5,7 @@ html {
 }
 body {
   margin: 0;
+  background: #f8f8f8;
 }
 
 @media only screen and (max-width: 560px) {
@@ -32,4 +33,14 @@ h1,h2,h3,h4,h5 {
   max-width: 1024px;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.map-container {
+  width: 65%;
+  height: 600px;
+  margin-left: 20px;
+}
+#map {
+  height: 100%;
+  width: 100%;
 }
