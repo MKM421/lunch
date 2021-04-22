@@ -90,8 +90,6 @@ class FilterButton extends React.Component {
  }
 
 
-
-
  handleClose() {
    this.setState({
      anchorEl: null

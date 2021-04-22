@@ -93,9 +93,10 @@
 
 .Business-information .price-level {
   font-size: 13px;
+  margin-top: 5px;
 }
-.Business-information .price-level .MuiRating-decimal {
-  margin-right: 1px;
+.Business-information .price-level .MuiRating-icon {
+  margin-right: -6px;
 }
 
 
