@@ -9,6 +9,12 @@
   padding-top: 4em;
 }
 
+@media only screen and (max-width: 1600px) and (min-width: 680px)  {
+  #BusinessList  {
+    display: block !important;
+  }
+}
+
 @media only screen and (max-width: 780px) {
   #BusinessList {
     width: 40%;

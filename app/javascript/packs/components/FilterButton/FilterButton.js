@@ -3,11 +3,13 @@ import { withStyles } from '@material-ui/core/styles';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import Checkbox from '@material-ui/core/Checkbox';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Button from '@material-ui/core/Button';
 import './FilterButton.css';
+
 
 const StyledMenu = withStyles({
   paper: {
@@ -79,12 +81,10 @@ class FilterButton extends React.Component {
 
    if (this.state.sort === "ascending") {
       this.props.businesses.sort((a,b) => (a.rating - b.rating))
-      //console.log(this.props.businesses)
       this.props.sortPlaces(this.props.businesses);
     }
     if (this.state.sort === "descending") {
       this.props.businesses.sort((a,b) => (b.rating - a.rating))
-       //console.log(this.props.businesses)
        this.props.sortPlaces(this.props.businesses);
     }
  }
@@ -120,8 +120,8 @@ class FilterButton extends React.Component {
           onClose={this.handleClose}
         >
           <RadioGroup id="radio-list" aria-label="quiz" name="quiz" value={this.state.sort} onChange={this.handleChange}>
-            <FormControlLabel value="descending" control={<GreenRadio />} className="filter-label-text" label="Ratings High to Low" />
-            <FormControlLabel value="ascending" control={<GreenRadio />} className="filter-label-text" label="Ratings Low to High" />
+            <FormControlLabel value="descending" control={<GreenRadio checkedIcon={<CheckCircleIcon />} />}  className="filter-label-text" label="Ratings High to Low" />
+            <FormControlLabel value="ascending" control={<GreenRadio checkedIcon={<CheckCircleIcon />} />}  className="filter-label-text" label="Ratings Low to High" />
           </RadioGroup>
           <div className="apply-button-container">
             <Button type="submit" className="apply-button" onClick={this.handleSubmit}>Apply</Button>

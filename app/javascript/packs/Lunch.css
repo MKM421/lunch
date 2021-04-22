@@ -55,6 +55,12 @@ input:focus {
   margin-right: 7px;
 }
 
+@media only screen and (max-width: 1600px) and (min-width: 680px)  {
+  .mobile-switch-container button {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 680px) {
   .mobile-switch-container button {
     display: block;

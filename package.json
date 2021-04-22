@@ -7,6 +7,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
+    "@testing-library/react": "^11.2.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "dotenv": "^8.2.0",
     "prop-types": "^15.7.2",
@@ -22,5 +23,14 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "jest": "^26.6.3",
     "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "jest": {
+    "roots": [
+      "test/javascript"
+    ]
   }
 }

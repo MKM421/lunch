@@ -1,18 +1,15 @@
 # Lunch 🍔 🌮 🍕 🥗 🍱
 
-Rails 6 + React app created with Webpacker
+Rails + React app created with [Webpacker](https://github.com/rails/webpacker)
 
-## Start Rails server
+## Running locally
+To start the rails server run:
 ```bash
 rails s
 ```
 
-* Ruby version 2.6.5
-
-* Rails version 6.0.5
-
-* System dependencies
-
-* Configuration
-
-* Deployment instructions
+## Prerequisites
+* Ruby 2.5+
+* Rails 5.2+
+* Node.js 10.22.1+ || 12+ || 14+
+* Yarn 1.x || 2.x+
