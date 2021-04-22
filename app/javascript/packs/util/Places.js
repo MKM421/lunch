@@ -11,10 +11,10 @@ const Places = {
       .then(jsonResponse => {
         if (jsonResponse.results) {
           // map results
-          console.log(jsonResponse.results);
+          // will be used as state in Lunch component
           return jsonResponse.results.map(business => ({
             id: business.place_id,
-            imageSrc: business.image_url,
+            imageSrc: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${business.photos[0].photo_reference}&key=${apiKey}` ,
             name: business.name,
             rating: business.rating,
             reviewCount: business.user_ratings_total,

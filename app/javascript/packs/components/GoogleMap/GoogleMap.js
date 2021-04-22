@@ -9,10 +9,12 @@ class GoogleMap extends React.Component {
     return (
       <div id="map-container">
         <div id="map"></div>
+
         <div id="info-content">
           <div id="iw-name"></div>
           <div id="iw-rating"></div>
         </div>
+        
         <div className="mobile-switch-container">
           <Button
             id="list-button"

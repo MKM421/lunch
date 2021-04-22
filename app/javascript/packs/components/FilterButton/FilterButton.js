@@ -50,8 +50,6 @@ class FilterButton extends React.Component {
   constructor(props) {
     super(props);
 
-    const spots = this.props.businesses;
-
     this.state = {
       anchorEl: null,
       sort: '',
@@ -61,6 +59,7 @@ class FilterButton extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClose = this.handleClose.bind(this);
+
   }
 
   handleClick(event) {
@@ -80,14 +79,18 @@ class FilterButton extends React.Component {
 
    if (this.state.sort === "ascending") {
       this.props.businesses.sort((a,b) => (a.rating - b.rating))
-      console.log(this.props.businesses)
-
+      //console.log(this.props.businesses)
+      this.props.sortPlaces(this.props.businesses);
     }
     if (this.state.sort === "descending") {
       this.props.businesses.sort((a,b) => (b.rating - a.rating))
-     console.log(this.props.businesses)
-   }
+       //console.log(this.props.businesses)
+       this.props.sortPlaces(this.props.businesses);
+    }
  }
+
+
+
 
  handleClose() {
    this.setState({
@@ -116,7 +119,7 @@ class FilterButton extends React.Component {
           open={Boolean(this.state.anchorEl)}
           onClose={this.handleClose}
         >
-          <RadioGroup aria-label="quiz" name="quiz" value={this.state.sort} onChange={this.handleChange}>
+          <RadioGroup id="radio-list" aria-label="quiz" name="quiz" value={this.state.sort} onChange={this.handleChange}>
             <FormControlLabel value="descending" control={<GreenRadio />} className="filter-label-text" label="Ratings High to Low" />
             <FormControlLabel value="ascending" control={<GreenRadio />} className="filter-label-text" label="Ratings Low to High" />
           </RadioGroup>
