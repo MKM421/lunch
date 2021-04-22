@@ -21,4 +21,4 @@ Make sure to upgrade to Rails 6 before running the app. [upgrade instructions](h
 * Yarn 1.x || 2.x+
 
 ### Other libraries
-Material-UI is utilized for most of the ui components. Check out the docs here:[](https://material-ui.com/)
+Material-UI is utilized for most of the ui components. Check out the docs [here](https://material-ui.com/)
