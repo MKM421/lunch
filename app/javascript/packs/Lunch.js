@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Loader } from '@googlemaps/js-api-loader';
-import Button from '@material-ui/core/Button';
 import './Lunch.css';
+import Button from '@material-ui/core/Button';
 import Header from './components/Header/Header';
 import BusinessList from './components/BusinessList/BusinessList';
 import GoogleMap from './components/GoogleMap/GoogleMap';
+import { Loader } from '@googlemaps/js-api-loader';
 import Places from './util/Places';
 
 
@@ -58,7 +58,7 @@ class Lunch extends React.Component {
       const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
       this.state.businesses.forEach(place => {
-        // map marker styles
+        // map marker style
         const svgMarker = {
           path: "M32 2a20 20 0 0 0-20 20c0 18 20 39 20 39s20-21 20-39A20 20 0 0 0 32 2z",
           fillColor: "#808080",
@@ -109,6 +109,8 @@ class Lunch extends React.Component {
     );
   }
 }
+
+export default Lunch
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
