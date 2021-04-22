@@ -11,7 +11,7 @@ rails s
 ```bash
 app/javascript/packs
 ```
-JS files are loaded from app/javascript/packs folder. All React components and CSS styles are contained there.
+All React components and CSS styles are contained there as well.
 
 ## Prerequisites
 * Ruby 2.5+
