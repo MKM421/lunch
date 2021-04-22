@@ -26,6 +26,10 @@ input:focus {
   justify-content: space-between;
 }
 
+.mobile-switch-container {
+  background: transparent;
+}
+
 .mobile-switch-container button {
   display:none;
   position: fixed;
@@ -38,6 +42,8 @@ input:focus {
   text-transform: capitalize;
   padding: 10px 22px;
   border-radius: 8px;
+  max-width: 130px;
+  margin: 0 auto;
   z-index: 99;
 }
 
