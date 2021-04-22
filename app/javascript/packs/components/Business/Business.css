@@ -39,10 +39,11 @@
 
 .Business h2 {
   color: #7f7f7f;
-  margin-top: .1rem;
-  margin-bottom: .3rem;
   font-size: 15px;
   font-weight: 600;
+  padding-right: 3px;
+  margin-top: .1rem;
+  margin-bottom: .3rem;
 }
 
 .Business .title-row {

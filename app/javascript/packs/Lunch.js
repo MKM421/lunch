@@ -45,7 +45,7 @@ class Lunch extends React.Component {
     };
 
     this.searchPlaces = this.searchPlaces.bind(this);
-
+    this.sortPlaces = this.sortPlaces.bind(this);
   }
 
 
@@ -57,7 +57,7 @@ class Lunch extends React.Component {
 
       const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-      results.forEach(place => {
+      this.state.businesses.forEach(place => {
         // map marker styles
         const svgMarker = {
           path: "M32 2a20 20 0 0 0-20 20c0 18 20 39 20 39s20-21 20-39A20 20 0 0 0 32 2z",
@@ -79,8 +79,9 @@ class Lunch extends React.Component {
         });
         // Set infoWindow content
         const contentString = `
-          <div id="content">
+          <div id="info-window-content">
             <h4>${place.name}</h4>
+            <img src=''/>
             <h5 id="iw-rating">${place.rating}</h5>
           </div>
         `;
@@ -100,7 +101,7 @@ class Lunch extends React.Component {
         }
 
         const infowindow = new google.maps.InfoWindow({
-          content: document.getElementById("info-content"),
+          content: contentString,
         });
         // Show infoWindow for each restaurant
         marker.addListener("click", () => {
@@ -110,14 +111,19 @@ class Lunch extends React.Component {
     });
   }
 
+  sortPlaces(sortedItems) {
+    this.setState({ businesses: sortedItems})
+  }
+
+
 
   render() {
     return (
       <div className="App">
-        <Header searchPlaces={this.searchPlaces} businesses={this.state.businesses}/>
+        <Header searchPlaces={this.searchPlaces} businesses={this.state.businesses} sortPlaces={this.sortPlaces}/>
         <div className="content-container">
           <BusinessList businesses={this.state.businesses} />
-          <GoogleMap businesses={this.state.businesses} />
+          <GoogleMap />
         </div>
       </div>
     );

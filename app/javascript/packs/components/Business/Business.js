@@ -26,7 +26,7 @@ class Business extends React.Component {
     return (
       <div className="Business">
         <div className="image-container">
-          <img src='' alt=''/>
+          <img src={this.props.business.imageSrc} alt={this.props.business.name}/>
         </div>
         <div className="Business-information">
           <div className="title-row">

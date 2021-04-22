@@ -29,6 +29,10 @@
   padding: 20px;
 }
 
+#radio-list:focus {
+  outline: none;
+}
+
 .filter-menu-item {
   padding: 0 70px 0px 10px;
   display: flex;

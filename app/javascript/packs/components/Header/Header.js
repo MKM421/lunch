@@ -15,7 +15,7 @@ class Header extends React.Component {
             <h1 className="logo-text">at Lunch</h1>
           </div>
           <div className="search-filter-container">
-            <FilterButton businesses={this.props.businesses}/>
+            <FilterButton businesses={this.props.businesses} sortPlaces={this.props.sortPlaces}/>
             <SearchBar searchPlaces={this.props.searchPlaces} />
           </div>
         </div>
