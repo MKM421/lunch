@@ -3,6 +3,7 @@ import './SearchBar.css';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 
+
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +16,6 @@ class SearchBar extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
-
 
   handleTermChange(event) {
     this.setState({term: event.target.value});

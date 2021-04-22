@@ -44,6 +44,7 @@ const GreenRadio = withStyles({
 })((props) => <Radio color="default" {...props} />);
 
 
+
 class FilterButton extends React.Component {
 
   constructor(props) {
@@ -76,8 +77,6 @@ class FilterButton extends React.Component {
 
  handleSubmit(event) {
    event.preventDefault();
-
-
 
    if (this.state.sort === "ascending") {
       this.props.businesses.sort((a,b) => (a.rating - b.rating))

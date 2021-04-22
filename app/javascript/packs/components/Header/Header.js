@@ -4,6 +4,7 @@ import Logo from 'images/all-trails-logo.svg';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterButton from '../FilterButton/FilterButton';
 
+
 class Header extends React.Component {
   render() {
     return (

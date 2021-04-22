@@ -1,4 +1,4 @@
-.BusinessList {
+#BusinessList {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,11 +6,24 @@
   max-height: 550px;
   overflow-y: scroll;
   margin-top: 1.5rem;
+  padding-top: 4em;
 }
 
 @media only screen and (max-width: 780px) {
-  .BusinessList {
+  #BusinessList {
+    width: 40%;
+    max-height: 450px;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #BusinessList {
+    display: none;
     width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
     max-height: 100%;
+    padding-top: 10em;
   }
 }
