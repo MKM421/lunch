@@ -78,30 +78,30 @@ class Lunch extends React.Component {
           animation: google.maps.Animation.DROP
         });
         // Set infoWindow content
-        const contentString = `
-          <div id="info-window-content">
-            <h4>${place.name}</h4>
-            <img src=''/>
-            <h5 id="iw-rating">${place.rating}</h5>
-          </div>
-        `;
+        // const contentString = `
+        //   <div id="info-window-content">
+        //     <h4>${place.name}</h4>
+        //     <img src=''/>
+        //     <h5 id="iw-rating">${place.rating}</h5>
+        //   </div>
+        // `;
         // show rating in infoWindow
-        document.getElementById("iw-rating").innerHTML = place.name;
+        //document.getElementById("iw-rating").innerHTML = place.name;
+        // if (place.rating) {
+        //   let ratingHtml = "";
+        //   for (let i = 0; i < 5; i++) {
+        //     if (place.rating < i + 0.5) {
+        //       ratingHtml += "&#10025;";
+        //     } else {
+        //       ratingHtml += "&#10029;";
+        //     }
+        //     document.getElementById("iw-rating").innerHTML = ratingHtml;
+        //   }
+        // }
 
-        if (place.rating) {
-          let ratingHtml = "";
-          for (let i = 0; i < 5; i++) {
-            if (place.rating < i + 0.5) {
-              ratingHtml += "&#10025;";
-            } else {
-              ratingHtml += "&#10029;";
-            }
-            document.getElementById("iw-rating").innerHTML = ratingHtml;
-          }
-        }
 
         const infowindow = new google.maps.InfoWindow({
-          content: contentString,
+          content: document.getElementById('info-window-content'),
         });
         // Show infoWindow for each restaurant
         marker.addListener("click", () => {
@@ -123,7 +123,7 @@ class Lunch extends React.Component {
         <Header searchPlaces={this.searchPlaces} businesses={this.state.businesses} sortPlaces={this.sortPlaces}/>
         <div className="content-container">
           <BusinessList businesses={this.state.businesses} />
-          <GoogleMap />
+          <GoogleMap businesses={this.state.businesses} />
         </div>
       </div>
     );

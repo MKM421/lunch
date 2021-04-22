@@ -1,7 +1,18 @@
 import React from 'react';
+import './GoogleMap.css';
+import '../Business/Business.css';
 import Button from '@material-ui/core/Button';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
-import './GoogleMap.css';
+import Rating from '@material-ui/lab/Rating';
+import { withStyles } from '@material-ui/core/styles';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import Favorite from '@material-ui/icons/Favorite';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import InfoWindow from '../InfoWindow/InfoWindow';
+
 
 
 class GoogleMap extends React.Component {
@@ -9,12 +20,11 @@ class GoogleMap extends React.Component {
     return (
       <div id="map-container">
         <div id="map"></div>
-
-        <div id="info-content">
-          <div id="iw-name"></div>
-          <div id="iw-rating"></div>
-        </div>
-        
+        {
+          this.props.businesses.map(business => {
+            return <InfoWindow business={business} key={business.id} />
+          })
+        }
         <div className="mobile-switch-container">
           <Button
             id="list-button"

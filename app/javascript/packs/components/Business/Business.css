@@ -91,6 +91,14 @@
   color: #bbb;
 }
 
+.Business-information .price-level {
+  font-size: 13px;
+}
+.Business-information .price-level .MuiRating-decimal {
+  margin-right: 1px;
+}
+
+
 
 @media only screen and (max-width: 680px) {
   .Business .MuiIconButton-root .MuiIconButton-label .MuiSvgIcon-root {
