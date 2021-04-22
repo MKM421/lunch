@@ -2,14 +2,16 @@
 
 Rails 6 + React app created with [Webpacker](https://github.com/rails/webpacker)
 
-## Structure
-JS files are loaded from app/javascript/packs folder. All React components and CSS styles are contained there. 
-
 ## Running locally
 To start the rails server run:
 ```bash
 rails s
 ```
+## Finding javaScript files
+```bash
+app/javascript/packs
+```
+JS files are loaded from app/javascript/packs folder. All React components and CSS styles are contained there.
 
 ## Prerequisites
 * Ruby 2.5+
