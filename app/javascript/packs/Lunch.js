@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Loader } from '@googlemaps/js-api-loader';
+import Button from '@material-ui/core/Button';
 import './Lunch.css';
 import Header from './components/Header/Header';
 import BusinessList from './components/BusinessList/BusinessList';
@@ -20,7 +21,7 @@ const mapOptions = {
     lat: 37.7590826,
     lng: -122.4457663
   },
-  zoom: 12,
+  zoom: 12.5,
   disableDefaultUI: true
 };
 
@@ -44,11 +45,14 @@ class Lunch extends React.Component {
     };
 
     this.searchPlaces = this.searchPlaces.bind(this);
+
   }
+
+
 
   searchPlaces(term) {
     Places.search(term).then(results => {
-
+      // Set state
       this.setState({ businesses: results });
 
       const map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -80,12 +84,11 @@ class Lunch extends React.Component {
             <h5 id="iw-rating">${place.rating}</h5>
           </div>
         `;
-
+        // show rating in infoWindow
         document.getElementById("iw-rating").innerHTML = place.name;
 
         if (place.rating) {
           let ratingHtml = "";
-
           for (let i = 0; i < 5; i++) {
             if (place.rating < i + 0.5) {
               ratingHtml += "&#10025;";
@@ -107,6 +110,7 @@ class Lunch extends React.Component {
     });
   }
 
+
   render() {
     return (
       <div className="App">
@@ -114,12 +118,7 @@ class Lunch extends React.Component {
         <div className="content-container">
           <BusinessList businesses={this.state.businesses} />
           <GoogleMap businesses={this.state.businesses} />
-
-          <div className="mobile-button">
-          {/* TODO: add mobile button to switch map and list views */}
-          </div>
         </div>
-
       </div>
     );
   }

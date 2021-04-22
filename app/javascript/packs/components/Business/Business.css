@@ -7,9 +7,10 @@
   padding: 15px;
   background: #fff;
 }
+
 .Business:hover {
   cursor: pointer;
-  border: 2px solid #438a14;
+  border: 2px solid #428a13;
 }
 
 .Business .image-container {
@@ -40,7 +41,7 @@
   color: #7f7f7f;
   margin-top: .1rem;
   margin-bottom: .3rem;
-  font-size: .82rem;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -58,9 +59,16 @@
   margin: -9px -8px 0;
   align-self: flex-start;
 }
+
 .Business .PrivateSwitchBase-root-4 {
   padding:5px;
 }
+
+.Business .MuiIconButton-root .MuiIconButton-label .MuiSvgIcon-root {
+  width: 25px;
+  height: 25px;
+}
+
 .Business-reviews {
   display: flex;
   flex-direction: row;
@@ -70,12 +78,22 @@
 
 .Business-reviews .restaurant-rating {
   color: #f1d165;
-  font-size: 1rem;
+  font-size: 18px;
 }
+
 .Business-reviews .restaurant-rating .MuiRating-decimal {
   margin-right: 3px;
 }
+
 .Business-reviews .user-ratings-total {
-  font-size: .6rem;
+  font-size: 11px;
   color: #bbb;
+}
+
+
+@media only screen and (max-width: 680px) {
+  .Business .MuiIconButton-root .MuiIconButton-label .MuiSvgIcon-root {
+    width: 30px;
+    height: 30px;
+  }
 }

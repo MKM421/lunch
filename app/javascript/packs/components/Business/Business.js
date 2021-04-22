@@ -11,13 +11,15 @@ import './Business.css';
 
 const GreenCheckbox = withStyles({
   root: {
-    color: '#438a14',
+    color: '#428a13',
     '&$checked': {
-      color: '#438a14',
+      color: '#428a13',
     },
   },
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
+
+
 
 class Business extends React.Component {
   render() {
@@ -35,7 +37,6 @@ class Business extends React.Component {
               checkedIcon={<Favorite />} name="checkedH" />}
              />
           </div>
-
           <div className="Business-reviews">
             <Rating
               className="restaurant-rating"
