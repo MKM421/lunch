@@ -61,7 +61,7 @@ class Lunch extends React.Component {
         // map marker style
         const svgMarker = {
           path: "M32 2a20 20 0 0 0-20 20c0 18 20 39 20 39s20-21 20-39A20 20 0 0 0 32 2z",
-          fillColor: "#808080",
+          fillColor: "#000",
           fillOpacity: 1,
           strokeWeight: 1,
           strokeColor: '#eee',

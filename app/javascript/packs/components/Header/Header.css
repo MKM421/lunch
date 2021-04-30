@@ -11,7 +11,7 @@
   max-width: 1024px;
   padding: 20px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .logo-container {
@@ -26,7 +26,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
   color: #ccc;
-  margin: -3px 0 0 10px;
+  margin: -3px 20px 0 10px;
   letter-spacing: 1px;
   line-height: 0;
 }

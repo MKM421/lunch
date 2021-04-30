@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import Logo from 'images/all-trails-logo.svg';
 import SearchBar from '../SearchBar/SearchBar';
 import FilterButton from '../FilterButton/FilterButton';
 
@@ -11,12 +10,11 @@ class Header extends React.Component {
       <div className="page-header">
         <div className="header-container">
           <div className="logo-container">
-            <img className="logo" src={Logo} />
-            <h1 className="logo-text">at Lunch</h1>
+            <h1 className="logo-text">Find Noms</h1>
           </div>
           <div className="search-filter-container">
-            <FilterButton businesses={this.props.businesses} sortPlaces={this.props.sortPlaces}/>
             <SearchBar searchPlaces={this.props.searchPlaces} />
+            <FilterButton businesses={this.props.businesses} sortPlaces={this.props.sortPlaces}/>
           </div>
         </div>
       </div>

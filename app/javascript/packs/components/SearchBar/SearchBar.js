@@ -37,7 +37,7 @@ class SearchBar extends React.Component {
     return (
       <div className="SearchBar">
         <div className="SearchBar-fields">
-          <input data-testid="test-search" id="search-input" type="text" placeholder="Search for a restaurant" onChange={this.handleTermChange} onKeyDown={this.handleKeyDown}/>
+          <input data-testid="test-search" id="search-input" type="text" placeholder="Search for pizza, tacos, chinese, etc..." onChange={this.handleTermChange} onKeyDown={this.handleKeyDown}/>
         </div>
         <div className="SearchBar-submit">
           <SearchIcon className="search-icon" onClick={this.handleSearch}/>

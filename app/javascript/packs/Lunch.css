@@ -21,7 +21,7 @@ input:focus {
 
 .content-container {
   display: flex;
-  max-width: 1024px;
+  max-width: 100%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -36,7 +36,7 @@ input:focus {
   bottom: 40px;
   left:0;
   right: 0;
-  background: #428a13;
+  background: #000;
   font-family: 'Proxima Nova', Arial, sans-serif;
   font-size: 20px;
   text-transform: capitalize;
@@ -48,7 +48,7 @@ input:focus {
 }
 
 .mobile-switch-container button:hover {
-  background: #69a041;
+  background: #333;
 }
 
 .mobile-switch-container button .MuiButton-label {

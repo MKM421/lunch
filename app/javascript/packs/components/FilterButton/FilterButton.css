@@ -1,23 +1,23 @@
 .filter {
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .filter .filter-button {
   background: #fff;
-  padding: 5px 2px;
+  padding: 7px 2px;
   border: 1px solid #ddd;
   color: #828282;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 100;
-  border-radius: 6px;
+  border-radius: 4px;
   text-transform: capitalize;
   box-shadow: none;
   min-width: 50px;
 }
 
 .filter .filter-button:hover {
-  background-color: #428a13;
-  border: 1px solid #428a13;
+  background-color: #000;
+  border: 1px solid #000;
   color: #fff;
 }
 
@@ -45,7 +45,7 @@
 
 .filter-menu-item .filter-item-icon:hover {
   cursor: pointer;
-  stroke: #428a13;
+  stroke: #000;
 }
 
 .MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
@@ -67,7 +67,7 @@
 }
 
 .apply-button-container .apply-button {
-  color: #428a13;
+  color: #000;
   font-weight: 600;
   margin-right:5px;
   font-size: .8em;
