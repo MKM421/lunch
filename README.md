@@ -1,20 +1,30 @@
 # Lunch 🍔 🌮 🍕 🥗 🍱
 
-Rails 6 + React app created with [Webpacker](https://github.com/rails/webpacker)
+Rails 6 + React app to find nearby places to eat. Created with [Webpacker](https://github.com/rails/webpacker)
 
 ## Running locally
-To start the rails server run:
+#### Install Ruby 2.6.5
+Install Ruby using [Ruby version manager](https://rvm.io/) (RVM)
+```bash
+rvm install 2.6.5
+rvm use 2.6.5
+```
+#### Install Rails 6
+```bash
+gem install rails -v=6.0.1
+```
+
+#### Start the Rails server:
 ```bash
 rails s
 ```
-## Finding javaScript files
+#### Finding javaScript files
 ```bash
 app/javascript/packs
 ```
 All React components and CSS styles are contained there as well.
 
 ## Prerequisites
-Make sure to upgrade to Rails 6 before running the app. [upgrade instructions](https://guides.rubyonrails.org/6_0_release_notes.html)
 * Ruby 2.5+
 * Rails 6+
 * Node.js 10.22.1+ || 12+ || 14+
