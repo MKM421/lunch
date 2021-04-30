@@ -3,18 +3,24 @@
 Rails 6 + React app to find nearby places to eat. Created with [Webpacker](https://github.com/rails/webpacker)
 
 ## Running locally
-#### Install Ruby 2.6.5
+
+### Install Ruby 2.6.5
 Install Ruby using [Ruby version manager](https://rvm.io/) (RVM)
 ```bash
 rvm install 2.6.5
 rvm use 2.6.5
 ```
-#### Install Rails 6
+### Install Rails 6
 ```bash
 gem install rails -v=6.0.1
 ```
 
-#### Start the Rails server:
+### Clone the repo
+```bash
+https://github.com/MKM421/lunch.git
+```
+
+### Start the Rails server:
 ```bash
 rails s
 ```
