@@ -4,10 +4,11 @@ Rails 6 + React app to find nearby places to eat. Created with [Webpacker](https
 
 ## Running locally
 
-### Install Ruby 2.6.5
+### Install Ruby 3.0.0
 Install Ruby using [Ruby version manager](https://rvm.io/) (RVM)
 ```bash
-rvm install 2.6.5
+from root: rvm install 3.0.0
+cd /project
 rvm use 2.6.5
 ```
 ### Install Rails 6
@@ -31,7 +32,7 @@ app/javascript/packs
 All React components and CSS styles are contained there as well.
 
 ## Prerequisites
-* Ruby 2.5+
+* Ruby 3.0+
 * Rails 6+
 * Node.js 10.22.1+ || 12+ || 14+
 * Yarn 1.x || 2.x+
